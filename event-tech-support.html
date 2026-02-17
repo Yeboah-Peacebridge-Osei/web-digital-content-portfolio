@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event & Tech Support | Peacebridge Osei Yeboah</title>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="detail-page">
+  <main class="portfolio">
+    <a class="detail-back" href="index.html">← Back to portfolio</a>
+    <span class="detail-badge detail-badge--blue">Event & Tech Support</span>
+    <h1 class="detail-title">Website updates, event media & tech assistance</h1>
+    <p class="detail-intro">In this role I maintained websites, supported event A/V and media setup, and provided tech assistance. Here’s evidence of that work.</p>
+
+    <section class="detail-section">
+      <div class="detail-section-head">
+        <span class="accent accent--blue"></span>
+        <h3>Website updates</h3>
+      </div>
+      <p>Content updates, layout changes, and improvements to organization and department sites.</p>
+      <div class="detail-gallery">
+        <button type="button" class="lightbox-trigger" data-src="assets/event-tech-website-after.png" data-alt="Gustavus Tech Fest website – updated version" aria-label="Enlarge image">
+          <img src="assets/event-tech-website-after.png" alt="Gustavus Tech Fest website – updated version" />
+        </button>
+        <button type="button" class="lightbox-trigger" data-src="assets/event-tech-website-before.png" data-alt="Gustavus Tech Fest website – previous version" aria-label="Enlarge image">
+          <img src="assets/event-tech-website-before.png" alt="Gustavus Tech Fest website – previous version" />
+        </button>
+      </div>
+      <p class="detail-caption">I updated the website for our annual tech events that take place in March.</p>
+    </section>
+
+    <section class="detail-section">
+      <div class="detail-section-head">
+        <span class="accent accent--blue"></span>
+        <h3>Event media setup</h3>
+      </div>
+      <p>Setting up and running A/V equipment, displays, and tech for events and meetings.</p>
+      <ul class="detail-bullets">
+        <li>Set up microphones, speakers, and sound systems for events</li>
+        <li>Ran projectors, displays, and presentation tech for meetings</li>
+        <li>Provided on-site A/V support during events and programs</li>
+        <li>Prepared and tested equipment before events</li>
+      </ul>
+    </section>
+
+    <section class="detail-section">
+      <div class="detail-section-head">
+        <span class="accent accent--blue"></span>
+        <h3>Tech assistance</h3>
+      </div>
+      <p>Day-to-day tech support, troubleshooting, and workstation setup.</p>
+      <ul class="detail-bullets">
+        <li>Troubleshot hardware and software issues for staff and students</li>
+        <li>Set up workstations, monitors, and peripherals</li>
+        <li>Assisted with connectivity, accounts, and basic IT requests</li>
+        <li>Supported classroom and office tech as needed</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden>
+    <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+    <img class="lightbox-img" src="" alt="" />
+  </div>
+
+  <script>
+    (function() {
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = lightbox.querySelector('.lightbox-img');
+      var closeBtn = lightbox.querySelector('.lightbox-close');
+      var triggers = document.querySelectorAll('.lightbox-trigger');
+
+      function openLightbox(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || '';
+        lightbox.hidden = false;
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.hidden = true;
+        document.body.style.overflow = '';
+      }
+
+      triggers.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          openLightbox(btn.getAttribute('data-src'), btn.getAttribute('data-alt'));
+        });
+      });
+
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    })();
+  </script>
+</body>
+</html>

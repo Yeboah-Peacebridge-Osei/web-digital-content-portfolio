@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CICE - Digital Content | Peacebridge Osei Yeboah</title>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="detail-page">
+  <main class="portfolio">
+    <a class="detail-back" href="index.html">← Back to portfolio</a>
+    <span class="detail-badge detail-badge--gold">CICE – Digital Content</span>
+    <h1 class="detail-title">Social media & global program promotion</h1>
+    <p class="detail-intro">For CICE I managed social channels and promoted global and cross-cultural programs. Here’s a sample of that work.</p>
+
+    <section class="detail-section">
+      <div class="detail-section-head">
+        <span class="accent accent--gold"></span>
+        <h3>Social media management</h3>
+      </div>
+      <p>Posted and scheduled content, engaged with audiences, and kept CICE’s presence consistent and on-brand.</p>
+      <div class="detail-gallery">
+        <button type="button" class="lightbox-trigger" data-src="assets/cice-social-1.png" data-alt="Instagram: Gustavus May Away 2026 – Italy study abroad" aria-label="Enlarge image"><img src="assets/cice-social-1.png" alt="Instagram: Gustavus May Away 2026 – Italy study abroad" /></button>
+        <button type="button" class="lightbox-trigger" data-src="assets/cice-social-2.png" data-alt="Instagram: Where to find us on Advising Day, Nov 13" aria-label="Enlarge image"><img src="assets/cice-social-2.png" alt="Instagram: Where to find us on Advising Day, Nov 13" /></button>
+        <button type="button" class="lightbox-trigger" data-src="assets/cice-social-3.png" data-alt="Instagram: CICE Global Photo Contest deadline reminder" aria-label="Enlarge image"><img src="assets/cice-social-3.png" alt="Instagram: CICE Global Photo Contest deadline reminder" /></button>
+        <button type="button" class="lightbox-trigger" data-src="assets/cice-social-4.png" data-alt="Instagram: Study abroad info session, Beck 101 Nov 12" aria-label="Enlarge image"><img src="assets/cice-social-4.png" alt="Instagram: Study abroad info session, Beck 101 Nov 12" /></button>
+      </div>
+    </section>
+
+    <section class="detail-section">
+      <div class="detail-section-head">
+        <span class="accent accent--gold"></span>
+        <h3>Global program promotion</h3>
+      </div>
+      <p>Campaigns and content that highlighted international and cross-cultural programs and encouraged participation.</p>
+      <div class="detail-gallery">
+        <button type="button" class="lightbox-trigger" data-src="assets/cice-global-1.png" data-alt="Study Away Fair – Nov 17, Heritage Banquet Room, JCC" aria-label="Enlarge image"><img src="assets/cice-global-1.png" alt="Study Away Fair – Nov 17, Heritage Banquet Room, JCC" /></button>
+        <button type="button" class="lightbox-trigger" data-src="assets/cice-global-2.png" data-alt="International Festival – ICC presents, March 10, Alumni Hall" aria-label="Enlarge image"><img src="assets/cice-global-2.png" alt="International Festival – ICC presents, March 10, Alumni Hall" /></button>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden>
+    <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+    <img class="lightbox-img" src="" alt="" />
+  </div>
+
+  <script>
+    (function() {
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = lightbox.querySelector('.lightbox-img');
+      var closeBtn = lightbox.querySelector('.lightbox-close');
+      var triggers = document.querySelectorAll('.lightbox-trigger');
+      function openLightbox(src, alt) { lightboxImg.src = src; lightboxImg.alt = alt || ''; lightbox.hidden = false; document.body.style.overflow = 'hidden'; }
+      function closeLightbox() { lightbox.hidden = true; document.body.style.overflow = ''; }
+      triggers.forEach(function(btn) { btn.addEventListener('click', function() { openLightbox(btn.getAttribute('data-src'), btn.getAttribute('data-alt')); }); });
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+    })();
+  </script>
+</body>
+</html>

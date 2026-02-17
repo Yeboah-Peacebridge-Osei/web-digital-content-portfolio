@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resident Assistant | Peacebridge Osei Yeboah</title>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="detail-page">
+  <main class="portfolio">
+    <a class="detail-back" href="index.html">← Back to portfolio</a>
+    <span class="detail-badge detail-badge--purple">Resident Assistant</span>
+    <h1 class="detail-title">Event flyers, welcome videos & community engagement</h1>
+    <p class="detail-intro">As a Resident Assistant I created event promotions, welcome videos, and supported community-building initiatives. Below is a selection of work from this role.</p>
+
+    <section class="detail-section">
+      <div class="detail-section-head">
+        <span class="accent accent--purple"></span>
+        <h3>Event flyers & promotions</h3>
+      </div>
+      <p>Designed and distributed flyers for hall events (e.g. Movie Night, socials) to drive attendance and engagement.</p>
+      <div class="detail-gallery">
+        <button type="button" class="lightbox-trigger" data-src="assets/ra-flyer-room-selection.png" data-alt="Room Selection Tabling flyer – dates and info outside Residential Life Office" aria-label="Enlarge image"><img src="assets/ra-flyer-room-selection.png" alt="Room Selection Tabling flyer – dates and info outside Residential Life Office" /></button>
+        <button type="button" class="lightbox-trigger" data-src="assets/ra-flyer-souperbowl-bingo.png" data-alt="Souperbowl Bingo event flyer – Saturday Feb 8, Alumni Hall" aria-label="Enlarge image"><img src="assets/ra-flyer-souperbowl-bingo.png" alt="Souperbowl Bingo event flyer – Saturday Feb 8, Alumni Hall" /></button>
+        <button type="button" class="lightbox-trigger" data-src="assets/ra-flyer-roommate-tips.png" data-alt="Getting Along With Your College Roommate – tips flyer" aria-label="Enlarge image"><img src="assets/ra-flyer-roommate-tips.png" alt="Getting Along With Your College Roommate – tips flyer" /></button>
+      </div>
+    </section>
+
+    <section class="detail-section">
+      <div class="detail-section-head">
+        <span class="accent accent--purple"></span>
+        <h3>Welcome video creation</h3>
+      </div>
+      <p>Produced welcome-back and orientation content to help residents feel at home and informed.</p>
+      <div class="detail-video-wrap" style="width: 400px; max-width: 100%; margin: 1rem auto; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.08); background: #000;">
+        <video controls preload="metadata" class="detail-video" style="display: block; width: 100%; height: auto; max-height: 240px; object-fit: contain;">
+          <source src="assets/IMG_0579.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <section class="detail-section">
+      <div class="detail-section-head">
+        <span class="accent accent--purple"></span>
+        <h3>Community engagement</h3>
+      </div>
+      <p>Photos and highlights from programs and events that built community in the hall.</p>
+      <div class="detail-gallery">
+        <button type="button" class="lightbox-trigger" data-src="assets/ra-engagement-1.png" data-alt="Community event – residents at serving counter in common area" aria-label="Enlarge image"><img src="assets/ra-engagement-1.png" alt="Community event – residents at serving counter in common area" /></button>
+        <button type="button" class="lightbox-trigger" data-src="assets/ra-engagement-2.png" data-alt="Community gathering – game night with tables and projected content" aria-label="Enlarge image"><img src="assets/ra-engagement-2.png" alt="Community gathering – game night with tables and projected content" /></button>
+        <button type="button" class="lightbox-trigger" data-src="assets/ra-engagement-3.png" data-alt="Craft and creative activity – residents at table with supplies" aria-label="Enlarge image"><img src="assets/ra-engagement-3.png" alt="Craft and creative activity – residents at table with supplies" /></button>
+        <button type="button" class="lightbox-trigger" data-src="assets/ra-engagement-4.png" data-alt="Slime-making or craft event – hands-on community activity" aria-label="Enlarge image"><img src="assets/ra-engagement-4.png" alt="Slime-making or craft event – hands-on community activity" /></button>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden>
+    <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+    <img class="lightbox-img" src="" alt="" />
+  </div>
+
+  <script>
+    (function() {
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = lightbox.querySelector('.lightbox-img');
+      var closeBtn = lightbox.querySelector('.lightbox-close');
+      var triggers = document.querySelectorAll('.lightbox-trigger');
+      function openLightbox(src, alt) { lightboxImg.src = src; lightboxImg.alt = alt || ''; lightbox.hidden = false; document.body.style.overflow = 'hidden'; }
+      function closeLightbox() { lightbox.hidden = true; document.body.style.overflow = ''; }
+      triggers.forEach(function(btn) { btn.addEventListener('click', function() { openLightbox(btn.getAttribute('data-src'), btn.getAttribute('data-alt')); }); });
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+    })();
+  </script>
+</body>
+</html>
