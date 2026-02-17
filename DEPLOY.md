@@ -13,7 +13,7 @@
 In the terminal, from this folder (`portfolio`), run (replace `Yeboah-Peacebridge-Osei` and `portfolio` if you used different names):
 
 ```bash
-git remote add origin https://github.com/Yeboah-Peacebridge-Osei/portfolio.git
+git remote add origin https://github.com/Yeboah-Peacebridge-Osei/web-digital-content-portfolio.git
 git branch -M main
 git push -u origin main
 ```
